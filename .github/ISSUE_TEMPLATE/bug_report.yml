@@ -1,0 +1,41 @@
+name: Ошибка
+description: Что не работает и как это воспроизвести
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: Не публикуйте BOT_TOKEN, содержимое .env или личные архивы. Для примера достаточно небольшой вымышленной заметки.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что произошло
+      description: Какой результат ожидался и что получилось вместо него?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      description: Команды, структура папок и минимальный пример заметки.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия проекта
+      placeholder: Например, v0.1.0 или хеш коммита
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Окружение
+      placeholder: Например, Windows 11, Python 3.14, polling / Docker / Render
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи
+      description: Удалите токены и личные данные перед отправкой.
+      render: text

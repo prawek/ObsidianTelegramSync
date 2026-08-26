@@ -1,0 +1,7 @@
+python-telegram-bot[webhooks]
+httpx
+aiohttp
+aiofiles
+uvicorn
+PyYAML
+python-dotenv

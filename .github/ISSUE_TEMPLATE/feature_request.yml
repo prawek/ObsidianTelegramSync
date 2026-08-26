@@ -1,0 +1,18 @@
+name: Предложение
+description: Улучшение синхронизации или работы с заметками
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Какую задачу нужно решить
+      description: Опишите конкретный сценарий использования.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Как это должно работать
+      description: Пример команды, заметки или ожидаемого результата.
+    validations:
+      required: true

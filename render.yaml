@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ObsidianTelegramSync
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false                          # введите вручную в Render Dashboard
+      - key: ALLOWED_USER_IDS
+        sync: false                          # Telegram ID владельца; несколько ID через запятую
+      - key: WEBHOOK_URL
+        value: https://obsidiantelegramsync.onrender.com
+      - key: SUPERGROUP_ID
+        sync: false                          # необязательно — можно через /setsupergroup
+      - key: WEBHOOK_SECRET
+        generateValue: true                  # Render генерирует автоматически
+      - key: DB_PATH
+        value: /data/sync.db
+    disk:
+      name: bot-data
+      mountPath: /data
+      sizeGB: 1
